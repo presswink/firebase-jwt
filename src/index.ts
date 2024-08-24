@@ -7,7 +7,7 @@ export interface IFirebaseJwt {
     decode(jwtString: string):jwt.Jwt | null
 }
 
-export class FirebaseJwt implements IFirebaseJwt {
+export default class FirebaseJwt implements IFirebaseJwt {
     private projectId: string
     
     constructor(projectId: string){
