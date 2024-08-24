@@ -24,3 +24,9 @@
 - build command changed with `tsup` npm package
 - jsdoc added
 - unused package removed
+
+## version - 0.0.5
+
+- file declearation issue fixed
+- `tsup` npm package removed and now compiling with `tsc` command
+- version changed
