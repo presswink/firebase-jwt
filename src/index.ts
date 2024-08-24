@@ -1,4 +1,4 @@
-import jwt, { JwtPayload } from "jsonwebtoken"
+import jwt, { Jwt, JwtPayload } from "jsonwebtoken"
 import utils from "./utils"
 
 
@@ -8,12 +8,23 @@ export interface IFirebaseJwt {
 }
 
 export default class FirebaseJwt implements IFirebaseJwt {
-    private projectId: string
-    
+   /**
+    * you have to pass firebase projectId to class constructor
+    * @param projectId - is an firebase project id
+    */ 
     constructor(projectId: string){
         this.projectId = projectId
     }
 
+    private projectId: string
+    
+    
+
+    /**
+     * this function is going to verify json web token (jwt) is valid or not if valid then it will return decoded data from token
+     * @param jwtString - is a json web token string
+     * @return {Promise<JwtPayload | string>} will return `JwtPayload` or `string`
+     */
     async verify(jwtString: string): Promise<JwtPayload | string>{
         const decoded  = jwt.decode(jwtString, {complete: true})
         const projectIdUrl = utils.getProjectUrl(this.projectId)
@@ -31,7 +42,12 @@ export default class FirebaseJwt implements IFirebaseJwt {
         }
     }
 
-    decode(jwtString: string):jwt.Jwt | null {
+    /**
+     * 
+     * @param jwtString - is a json web token string
+     * @return {Jwt | null} will return `Jwt` or `null`
+     */
+    decode(jwtString: string):Jwt | null {
         return jwt.decode(jwtString, {complete: true})
     }
 }

@@ -35,7 +35,7 @@ const verifyResult = jwt.verify(jwtToken)
 console.log(verifyResult)
 
 // decode jwt tokens
-const decodeResult = jwt.verify(jwtToken)
+const decodeResult = jwt.decode(jwtToken)
 console.log(decodeResult)
 
 ```
@@ -57,7 +57,7 @@ const verifyResult = jwt.verify(jwtToken)
 console.log(verifyResult)
 
 // decode jwt tokens
-const decodeResult = jwt.verify(jwtToken)
+const decodeResult = jwt.decode(jwtToken)
 console.log(decodeResult)
 
 ```
