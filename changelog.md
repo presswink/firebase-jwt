@@ -23,3 +23,4 @@
 - type declearation file added
 - build command changed with `tsup` npm package
 - jsdoc added
+- unused package removed
