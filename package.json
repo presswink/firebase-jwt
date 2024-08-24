@@ -1,6 +1,6 @@
 {
   "name": "@presswink/firebase-jwt",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "this package is going to verify firebase access-token without using firebase admin sdk.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -11,7 +11,7 @@
   "type": "commonjs",
   "scripts": {
     "test": "mocha --require ts-node/register src/**/*.spec.ts",
-    "build": "rm -rf ./dist && tsc",
+    "build": "rm -rf ./dist && tsup **/*.ts",
     "lint": "npx eslint . --fix"
   },
   "repository": {
