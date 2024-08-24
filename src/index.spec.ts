@@ -1,5 +1,5 @@
 import Sinon from "sinon";
-import { FirebaseJwt } from ".";
+import FirebaseJwt from ".";
 import jwt, { JwtPayload } from 'jsonwebtoken'
 import utils from "./utils";
 import { expect } from "chai";
