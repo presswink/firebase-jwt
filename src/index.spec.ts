@@ -4,9 +4,6 @@ import jwt, { JwtPayload } from 'jsonwebtoken'
 import utils from "./utils";
 import { expect } from "chai";
 import * as jose from 'jose'
-import * as crypto from 'crypto'
-import * as nodeforge from 'node-forge'
-import pem from 'pem'
 
 describe("FirebaseJwt testing", function(){
     
