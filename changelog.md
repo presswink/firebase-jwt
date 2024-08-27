@@ -30,3 +30,10 @@
 - file declearation issue fixed
 - `tsup` npm package removed and now compiling with `tsc` command
 - version changed
+
+## version - 0.0.6
+
+- next.js support added
+- version changed
+- commonjs example fixed
+- nextjs example added

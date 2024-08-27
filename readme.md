@@ -19,7 +19,7 @@ yarn add @presswink/firebase-jwt
 
 2) Examples
 
-`typescript`
+`typescript` or `es6`
 
 ```ts
 import FirebaseJwt from '@presswink/firebase-jwt'
@@ -44,12 +44,36 @@ console.log(decodeResult)
 `commonjs`
 
 ```js
-const FirebaseJwt require('@presswink/firebase-jwt')
+const FirebaseJwt = require('@presswink/firebase-jwt')
 
 const projectId = "firebase-auth"
 const jwtToken = ""
 
 const jwt = new FirebaseJwt(projectId)
+
+// verify jwt tokens
+
+const verifyResult = jwt.verify(jwtToken)
+console.log(verifyResult)
+
+// decode jwt tokens
+const decodeResult = jwt.decode(jwtToken)
+console.log(decodeResult)
+
+```
+
+
+`next.js`
+
+```js
+'use server'
+
+const {NextFirebaseJwt} = require('@presswink/firebase-jwt')
+
+const projectId = "firebase-auth"
+const jwtToken = ""
+
+const jwt = new NextFirebaseJwt(projectId)
 
 // verify jwt tokens
 
@@ -112,6 +136,14 @@ yarn test
 ```
 
 
+
+# Docs
+
+### [changelog.md](changelog.md)
+
+
+
 # Contributor
 
 [@Aditya panther](https://github.com/Adityapanther)
+
